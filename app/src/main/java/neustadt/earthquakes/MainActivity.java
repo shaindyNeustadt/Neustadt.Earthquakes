@@ -20,13 +20,12 @@ import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private Earthquake[] earthquakes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        recyclerView = (RecyclerView)findViewById(R.id.list);
+        recyclerView = (RecyclerView) findViewById(R.id.list);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -34,9 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
         EarthquakeAsyncTask task = new EarthquakeAsyncTask(recyclerView);
         task.execute();
-
-
-
     }
 
     @Override

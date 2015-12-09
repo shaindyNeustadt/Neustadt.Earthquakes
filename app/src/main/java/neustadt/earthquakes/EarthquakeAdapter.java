@@ -5,12 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class EarthquakeAdapter extends RecyclerView.Adapter<EarthquakeViewHolder>{
+public class EarthquakeAdapter extends RecyclerView.Adapter<EarthquakeViewHolder> {
 
-    private Earthquake[] earthquakes;
+    private Feature[] features;
 
-    public EarthquakeAdapter(Earthquake[] earthquakes){
-        this.earthquakes = earthquakes;
+    public EarthquakeAdapter(Feature[] features) {
+        this.features = features;
     }
 
     @Override
@@ -21,12 +21,12 @@ public class EarthquakeAdapter extends RecyclerView.Adapter<EarthquakeViewHolder
 
     @Override
     public void onBindViewHolder(final EarthquakeViewHolder holder, final int position) {
-        holder.bind(earthquakes[position]);
+        holder.bind(features[position]);
     }
 
     @Override
     public int getItemCount() {
-        return earthquakes.length;
+        return features.length;
     }
 }
 

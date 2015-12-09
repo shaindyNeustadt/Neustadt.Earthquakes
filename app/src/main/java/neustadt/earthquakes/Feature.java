@@ -1,9 +1,9 @@
 package neustadt.earthquakes;
 
 public class Feature {
-    private String title;
+    private Property properties;
 
     public String getTitle(){
-        return title;
+        return properties.getTitle();
     }
 }
