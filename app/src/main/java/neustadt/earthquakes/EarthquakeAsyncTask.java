@@ -25,7 +25,7 @@ public class EarthquakeAsyncTask extends AsyncTask<Void, Void, Earthquake> {
     @Override
     protected Earthquake doInBackground(Void... params) {
         try {
-            URL url = new URL("http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson");
+            URL url = new URL("http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.geojson");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             InputStream in = connection.getInputStream();
             Gson gson = new GsonBuilder().create();
